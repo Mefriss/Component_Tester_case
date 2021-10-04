@@ -10,10 +10,18 @@ translate([0,wall_width-wall_thickness,0]){
     cube([wall_width,wall_thickness,wall_width]);
 }
 rotate([0,90,0]){
-    translate([-wall_width,wall_thickness,0])
-cylinder(d = 10, h = wall_thickness); 
+    translate([-wall_width,wall_thickness,0]){
+        difference(){
+        cylinder(d = 10, h = wall_thickness);
+        cylinder(d = 5, h = wall_thickness);  
+        }
+            }
 }
+
 rotate([0,90,0]){
     translate([-wall_width,wall_thickness,wall_width-wall_thickness])
-cylinder(d = 10, h = wall_thickness); 
+    difference(){
+        cylinder(d = 10, h = wall_thickness); 
+        cylinder(d = 5, h = wall_thickness);
+    } 
 }
