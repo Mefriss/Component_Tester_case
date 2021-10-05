@@ -1,3 +1,4 @@
+$fn = 48;
 wall_thickness = 5;
 wall_width = 120;
 cube([wall_width,wall_width,wall_thickness]);
