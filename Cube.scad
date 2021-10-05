@@ -14,7 +14,8 @@ cube([wall_thickness,wall_width,wall_width]);
    translate([-5,(wall_width/2)-38/2,(wall_width/2)-38/2])
     cube([wall_thickness+10,38,38]);
 }
-    
+
+
 
 translate([wall_width-wall_thickness,0,0]){
     difference(){
@@ -55,3 +56,50 @@ rotate([0,90,0]){
         cylinder(d = 5, h = wall_width+20);
     } 
 }
+ // feet
+translate([wall_width,15,15]){
+
+    rotate([0,90,0]){
+    translate([0,0,0]){
+        difference(){
+        cylinder(d = 20, h = wall_thickness);
+        
+        }
+            }
+}
+}
+translate([wall_width,wall_width -15,15]){
+
+    rotate([0,90,0]){
+    translate([0,0,0]){
+        difference(){
+        cylinder(d = 20, h = wall_thickness);
+        
+        }
+            }
+}
+}
+translate([wall_width,wall_width -15,wall_width -15]){
+
+    rotate([0,90,0]){
+    translate([0,0,0]){
+        difference(){
+        cylinder(d = 20, h = wall_thickness);
+        
+        }
+            }
+}
+}
+translate([wall_width,15,wall_width -15]){
+
+    rotate([0,90,0]){
+    translate([0,0,0]){
+        difference(){
+        cylinder(d = 20, h = wall_thickness);
+        
+        }
+            }
+}
+}
+
+///////////////////////////////////////////
