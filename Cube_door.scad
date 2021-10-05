@@ -21,14 +21,10 @@ rotate([0,90,0]){
             cylinder(d = 5, h = wall_width);  
       }
         }
-        //translate([-5,0,wall_width-3*wall_thickness])
-     //   cube([3,10,wall_thickness]);
+        
 }
-}//
-//
-//rotate([0,90,0]){
-//    translate([-5,wall_thickness,wall_width-3*wall_thickness])
-     //   cylinder(d = 10, h = wall_thickness); 
-    //translate([-5,0,wall_width-3*wall_thickness])
-    //cube([3,10,wall_thickness]);
-////}//
+}
+
+// handle
+translate([(wall_width-wall_thickness*2)/4,wall_width-4*wall_thickness,wall_thickness])
+cube([55,15,15]);
