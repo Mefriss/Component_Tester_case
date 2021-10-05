@@ -1,9 +1,37 @@
 $fn =48;
 wall_thickness = 5;
 wall_width = 120;
+wall_offset = 0.5;
+
+
+
+//// hinge support
+difference(){
+translate([0,5,5]){
+    
+    cube([wall_width-2*wall_thickness-2*wall_offset,15,wall_thickness]);
+    
+}
+
+rotate([0,90,0]){
+    translate([-5,wall_thickness,-5]){
+        difference(){
+            cylinder(d = 10, h = wall_width);  
+        }
+            }
+        }
+        
+translate([(90/4)-2*wall_thickness-2*wall_offset,5,5]){
+    
+    cube([90-2*wall_offset,20,wall_thickness+5]);
+    
+}
+    }
+    
+/////////////////////////////////////////////////
 difference(){
 translate([0,5,0])
-cube([wall_width-2*wall_thickness,wall_width-wall_thickness,wall_thickness]);
+cube([wall_width-2*wall_thickness-2*wall_offset,wall_width-wall_thickness - 2*wall_offset,wall_thickness]);
 
 rotate([0,90,0]){
     translate([-5,wall_thickness,-5]){
@@ -13,16 +41,23 @@ rotate([0,90,0]){
             }
         }
     }
+
 difference(){
 rotate([0,90,0]){
    translate([-5,wall_thickness,0]){
      difference(){
-        cylinder(d = 10, h = wall_width-2*wall_thickness);
+        cylinder(d = 10, h = wall_width-2*wall_thickness - 2* wall_offset);
+         
          translate([0,0,-5])
-            cylinder(d = 5, h = wall_width);  
+            cylinder(d = 3.2, 120);  
       }
         }
         
+}
+translate([(90/4)-2*wall_thickness-2*wall_offset,0,5]){
+    
+    cube([90-2*wall_offset,20,wall_thickness+5]);
+    
 }
 }
 

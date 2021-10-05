@@ -1,8 +1,27 @@
 $fn = 48;
 wall_thickness = 5;
 wall_width = 120;
-cube([wall_width,wall_width,wall_thickness]);
+gold_pin_width = 50;
+styrophoam_thickness = 30;
 
+////////goldpin support //////////
+translate([0,0,0]){
+difference(){
+translate([wall_width-2*wall_thickness-5,wall_width/2,(wall_width/2)+(styrophoam_thickness/4)]){
+rotate([0,90,0])
+cube([20,gold_pin_width,styrophoam_thickness], center = true);
+}
+translate([wall_width-2*wall_thickness,(wall_width/2),(wall_width/2)+(styrophoam_thickness/4)]){
+rotate([0,90,0])
+cube([20-10,gold_pin_width-10,styrophoam_thickness+20], center = true);
+}
+}
+}
+////////TYL////////////
+cube([wall_width,wall_width,wall_thickness]);
+///////////////////////
+
+/////////GORA///////////
 difference(){
 
 cube([wall_thickness,wall_width,wall_width]);
@@ -14,9 +33,11 @@ cube([wall_thickness,wall_width,wall_width]);
    translate([-5,(wall_width/2)-38/2,(wall_width/2)-38/2])
     cube([wall_thickness+10,38,38]);
 }
+/////////////////////////////////////////
 
+/////////////////SPOD//////////////////////
 
-
+difference(){
 translate([wall_width-wall_thickness,0,0]){
     difference(){
     cube([wall_thickness,wall_width,wall_width]);
@@ -28,10 +49,13 @@ translate([wall_width-wall_thickness,0,0]){
         cylinder(d = 5, h = wall_width+20);
     } 
 }
-
-        
-    }
+}
     
+translate([wall_width-2*wall_thickness,(wall_width/2),(wall_width/2)+(styrophoam_thickness/4)]){
+rotate([0,90,0])
+cube([20-10,gold_pin_width-10,styrophoam_thickness], center = true);
+}
+   } 
     
 
 cube([wall_width,wall_thickness,wall_width-5]);
@@ -43,7 +67,7 @@ rotate([0,90,0]){
         difference(){
         cylinder(d = 10, h = wall_thickness);
         translate([0,0,-5])
-        cylinder(d = 5, h = wall_thickness+15);  
+        cylinder(d = 3.2, h = wall_thickness+15);  
         }
             }
 }
@@ -53,10 +77,11 @@ rotate([0,90,0]){
     difference(){
         cylinder(d = 10, h = wall_thickness); 
         translate([0,0,-wall_width])
-        cylinder(d = 5, h = wall_width+20);
+        cylinder(d = 3.2, h = wall_width+20);
     } 
 }
  // feet
+
 translate([wall_width,15,15]){
 
     rotate([0,90,0]){
