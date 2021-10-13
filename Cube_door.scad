@@ -31,7 +31,7 @@ translate([wall_width/2-wall_thickness,5,wall_thickness*2+wall_thickness/2-1]){
 /////////////////////////////////////////////////
 difference(){
 translate([0,wall_thickness,0])
-cube([wall_width-2*wall_thickness-2*wall_offset,wall_width-2*wall_thickness - 2*wall_offset,wall_thickness]);
+cube([wall_width-2*wall_thickness-2*wall_offset,wall_width-3*wall_thickness - 2*wall_offset,wall_thickness]);
 
 rotate([0,90,0]){
     translate([-wall_thickness,wall_thickness,-5]){
