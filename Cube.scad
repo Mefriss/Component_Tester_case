@@ -24,10 +24,10 @@ cube([20-10,gold_pin_width-10,styrophoam_thickness+20], center = true);
 //goldpin_s();
 rotate([0,90,0]){
     difference(){
-    translate([-styrophoam_thickness/2-wall_thickness,wall_width/2,(wall_width/2)-2.5+2*wall_thickness/2])
-    cube([styrophoam_thickness+wall_thickness,gold_pin_width+2*wall_thickness,2.5+2*wall_thickness],center=true);
-    translate([-styrophoam_thickness-2*wall_thickness,wall_width/2,(wall_width/2)-2.5+2*wall_thickness/2])
-    cube([4*styrophoam_thickness+wall_thickness+10,gold_pin_width,2.5],center=true);
+    translate([-styrophoam_thickness/2-wall_thickness,wall_width/2,(wall_width/2)-2.8+2*wall_thickness/2])
+    cube([styrophoam_thickness+wall_thickness,gold_pin_width+2*wall_thickness,2.8+2*wall_thickness],center=true);
+    translate([-styrophoam_thickness-2*wall_thickness,wall_width/2,(wall_width/2)-2.8+2*wall_thickness/2])
+    cube([4*styrophoam_thickness+wall_thickness+10,gold_pin_width,2.8],center=true);
     }
 }
 ///goldpin support back ////////
@@ -38,8 +38,8 @@ difference(){
 cube([wall_width,wall_width,wall_thickness]);
 
 rotate([0,90,0]){
-translate([-styrophoam_thickness-2*wall_thickness+20,(wall_width/2),(wall_width/2)-2.5+2*wall_thickness/2])
-    cube([4*styrophoam_thickness+wall_thickness+10,gold_pin_width,2.5],center=true);
+translate([-styrophoam_thickness-2*wall_thickness+20,(wall_width/2),(wall_width/2)-2.8+2*wall_thickness/2])
+    cube([4*styrophoam_thickness+wall_thickness+10,gold_pin_width,2.8],center=true);
     }
 
 }
